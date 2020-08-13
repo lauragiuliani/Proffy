@@ -1,5 +1,5 @@
 import Knex from 'knex';
-//fazer alterações
+
 export async function up(knex: Knex) {
     return knex.schema.createTable('users', table => {
         table.increments('id').primary();
@@ -10,7 +10,6 @@ export async function up(knex: Knex) {
     });
 }
 
-//desfazer alterações
 export async function down(knex: Knex) {
     return knex.schema.dropTable('users');
 }

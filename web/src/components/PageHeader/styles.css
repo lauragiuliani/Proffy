@@ -20,12 +20,12 @@
 }
 
 .page-header .top-bar-container a:hover {
-    opacity: 0.2s;
+    opacity: 0.6;
 }
 
 .page-header .top-bar-container > img {
     height: 1.6rem;
-} 
+}
 
 .page-header .header-content {
     width: 90%;
@@ -66,5 +66,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;
     }
 }

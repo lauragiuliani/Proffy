@@ -4,15 +4,14 @@ export async function up(knex: Knex) {
     return knex.schema.createTable('classes', table => {
         table.increments('id').primary();
         table.string('subject').notNullable();
-        table.decimal('cost').notNullable()
+        table.decimal('cost').notNullable();
 
-        //relações com outras tabelas
-        table.integer('users_id')
-            .notNullable()
-            .references('id')
-            .inTable('users')
-            .onUpdate('CASCADE')
-            .onDelete('CASCADE')
+        table.integer('user_id')
+         .notNullable()
+         .references('id')
+         .inTable('users')
+         .onUpdate('CASCADE')
+         .onDelete('CASCADE');
     });
 }
 
